@@ -1,0 +1,13 @@
+id,user_id,name,type,prompt,is_default,is_active,description,created_at,updated_at
+46659265-20b8-4ff9-b993-bf8088982880,851021a8-2db5-4960-abf3-dbe81c6f41c4,Document Analysis Prompt,document_analysis,"Analyzes medical/legal documents
+Extracts patient info, medical details, timeline, costs
+Returns structured JSON with comprehensive data",f,t,Document Analysis Prompt (Azure OpenAI Service),2025-08-14 12:17:33.229062,2025-08-14 12:17:33.229062
+70f39b2a-86d9-4bab-a131-23446ede1a43,851021a8-2db5-4960-abf3-dbe81c6f41c4,Demand Letter,demand_letter,"Creates professional legal demand letters
+Includes case summary, medical findings, damages, legal basis
+Uses professional legal language",f,t,Demand Letter Generation Prompt:,2025-08-14 12:18:04.733783,2025-08-14 12:18:04.733783
+51afca4e-e377-4184-8310-dfa6fc9b3410,851021a8-2db5-4960-abf3-dbe81c6f41c4,AI Chat Assistant,chat_system,"Specialized medical legal assistant
+Helps with document analysis, chronology review, case strategy
+Maintains legal and medical accuracy",f,t,AI Chat Assistant Prompt:,2025-08-14 12:18:39.737035,2025-08-14 12:18:39.737035
+af7449ba-c9c0-47d1-8ca7-26f769a0a996,851021a8-2db5-4960-abf3-dbe81c6f41c4,Document Editing/Modification,document_editing,"Interactive document editing capabilities
+Can modify summaries and extracted data
+Responds with structured JSON format",f,t,Document Editing/Modification Prompt,2025-08-14 12:19:09.106213,2025-08-14 12:20:02.851

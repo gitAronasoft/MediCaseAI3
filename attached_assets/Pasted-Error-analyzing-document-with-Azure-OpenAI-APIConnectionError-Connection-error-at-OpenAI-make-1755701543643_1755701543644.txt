@@ -1,0 +1,38 @@
+Error analyzing document with Azure OpenAI: APIConnectionError: Connection error.
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:611:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AzureOpenAIService.analyzeDocument (/home/runner/workspace/server/aiService.ts:162:24)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:834:28) {
+  status: undefined,
+  headers: undefined,
+  requestID: undefined,
+  error: undefined,
+  code: undefined,
+  param: undefined,
+  type: undefined,
+  cause: TypeError: fetch failed
+      at node:internal/deps/undici/undici:13510:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async OpenAI.fetchWithTimeout (/home/runner/workspace/node_modules/openai/src/client.ts:735:14)
+      at async OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:566:22)
+      at async AzureOpenAIService.analyzeDocument (/home/runner/workspace/server/aiService.ts:162:24)
+      at async <anonymous> (/home/runner/workspace/server/routes.ts:834:28) {
+    [cause]: Error: getaddrinfo ENOTFOUND sudhi-meb1erkw-eastus2.cognitiveservices.azure.com
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'sudhi-meb1erkw-eastus2.cognitiveservices.azure.com'
+    }
+  }
+}
+AI analysis error: Error: Failed to analyze document
+    at AzureOpenAIService.analyzeDocument (/home/runner/workspace/server/aiService.ts:180:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:834:28)
+2:51:47 PM [express] POST /api/documents/38a63449-6494-4c56-984c-bc3e909ac632/analyze 200 in 11290ms…
+2:51:48 PM [express] GET /api/cases/df220bf6-a398-4ddc-8880-0f1c1c526dde/documents 200 in 355ms :: […
+2:51:54 PM [express] GET /api/user 304 in 137ms :: {"id":"851021a8-2db5-4960-abf3-dbe81c6f41c4","use…
+2:51:54 PM [express] GET /api/user 304 in 137ms :: {"id":"851021a8-2db5-4960-abf3-dbe81c6f41c4","use…
+2:51:54 PM [express] GET /api/cases 304 in 189ms :: [{"id":"298f694a-4eb3-43cd-9b75-e739edc21430","c…
+2:51:55 PM [express] GET /api/cases 304 in 190ms :: [{"id":"298f694a-4eb3-43cd-9b75-e739edc21430","c…

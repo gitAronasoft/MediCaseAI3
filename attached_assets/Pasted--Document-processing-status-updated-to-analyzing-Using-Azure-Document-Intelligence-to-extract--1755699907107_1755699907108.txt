@@ -1,0 +1,131 @@
+✅ Document processing status updated to 'analyzing'
+🤖 Using Azure Document Intelligence to extract text from: car_accident_medical_record.pdf
+🤖 Analyzing document with Azure Document Intelligence: documents/851021a8-2db5-4960-abf3-dbe81c6f41c4/1755699753137_7ku3oelgdui_car_accident_medical_record.pdf
+🔗 Using public blob URL: https://demandgenrg.blob.core.windows.net/documents/documents/851021a8-2db5-4960-abf3-dbe81c6f41c4/1755699753137_7ku3oelgdui_car_accident_medical_record.pdf
+⏳ Starting Document Intelligence analysis...
+Document Intelligence analysis failed: RestError: Invalid request. 
+ {
+  "name": "RestError",
+  "code": "InvalidRequest",
+  "statusCode": 400,
+  "details": {
+    "error": {
+      "code": "InvalidRequest",
+      "message": "Invalid request.",
+      "innererror": {
+        "code": "InvalidContent",
+        "message": "Could not download the file from the given URL."
+      }
+    }
+  },
+  "request": {
+    "url": "https://meddocument.cognitiveservices.azure.com/formrecognizer/documentModels/prebuilt-document:analyze?api-version=2023-07-31",
+    "headers": {
+      "content-type": "application/json",
+      "accept": "application/json",
+      "accept-encoding": "gzip,deflate",
+      "user-agent": "azsdk-js-ai-form-recognizer/5.1.0 core-rest-pipeline/1.22.0 Node/20.19.3 OS/(x64-Linux-6.2.16)",
+      "x-ms-client-request-id": "86b7877c-fe20-4961-a467-fd8673f50290",
+      "ocp-apim-subscription-key": "REDACTED",
+      "content-length": "172"
+    },
+    "method": "POST",
+    "timeout": 0,
+    "disableKeepAlive": false,
+    "streamResponseStatusCodes": {},
+    "withCredentials": false,
+    "requestId": "86b7877c-fe20-4961-a467-fd8673f50290",
+    "allowInsecureConnection": false,
+    "enableBrowserStreams": false,
+    "tracingOptions": {
+      "tracingContext": {
+        "_contextMap": {}
+      }
+    }
+  }
+}
+❌ Document Intelligence failed with error: Error: Document analysis failed: Invalid request.
+    at DocumentIntelligenceService.analyzeDocument (/home/runner/workspace/server/azureDocumentIntelligence.ts:121:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:706:42)
+❌ Error type: object
+❌ Error message: Document analysis failed: Invalid request.
+❌ Error stack: Error: Document analysis failed: Invalid request.
+    at DocumentIntelligenceService.analyzeDocument (/home/runner/workspace/server/azureDocumentIntelligence.ts:121:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:706:42)
+❌ Document path that failed: documents/851021a8-2db5-4960-abf3-dbe81c6f41c4/1755699753137_7ku3oelgdui_car_accident_medical_record.pdf
+❌ Document Intelligence available: true
+🔢 Generating vector embeddings for document content...
+📝 Split document into 1 chunks for embedding
+🔢 Generating embeddings for text (230 chars)...
+Failed to generate embeddings: NotFoundError: 404 The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.
+    at Function.generate (/home/runner/workspace/node_modules/openai/src/core/error.ts:84:14)
+    at OpenAI.makeStatusError (/home/runner/workspace/node_modules/openai/src/client.ts:445:28)
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:668:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AzureOpenAIEmbeddingsService.generateEmbedding (/home/runner/workspace/server/azureOpenAIEmbeddings.ts:73:24)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:762:31) {
+  status: 404,
+  headers: Headers {
+    'content-length': '197',
+    'content-type': 'application/json',
+    'apim-request-id': 'f66ddc39-64d3-4076-bb2b-f7fda22bcc89',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    'x-content-type-options': 'nosniff',
+    'x-ms-region': 'South Central US',
+    date: 'Wed, 20 Aug 2025 14:22:47 GMT'
+  },
+  requestID: null,
+  error: {
+    code: 'DeploymentNotFound',
+    message: 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'
+  },
+  code: 'DeploymentNotFound',
+  param: undefined,
+  type: undefined
+}
+Error generating vector embeddings: Error: Embeddings generation failed: 404 The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.
+    at AzureOpenAIEmbeddingsService.generateEmbedding (/home/runner/workspace/server/azureOpenAIEmbeddings.ts:98:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:762:31)
+🤖 Starting AI analysis with Azure OpenAI...
+Sending document content to AI service: Document: car_accident_medical_record.pdf
+Uploaded: 8/20/2025
+File Type: application/pdf
+
+Note: Unable to extract text content from this document using Azure Document Intelligence. Error: Document ana...
+Error analyzing document with Azure OpenAI: APIConnectionError: Connection error.
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:611:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AzureOpenAIService.analyzeDocument (/home/runner/workspace/server/aiService.ts:162:24)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:794:28) {
+  status: undefined,
+  headers: undefined,
+  requestID: undefined,
+  error: undefined,
+  code: undefined,
+  param: undefined,
+  type: undefined,
+  cause: TypeError: fetch failed
+      at node:internal/deps/undici/undici:13510:13
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async OpenAI.fetchWithTimeout (/home/runner/workspace/node_modules/openai/src/client.ts:735:14)
+      at async OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:566:22)
+      at async AzureOpenAIService.analyzeDocument (/home/runner/workspace/server/aiService.ts:162:24)
+      at async <anonymous> (/home/runner/workspace/server/routes.ts:794:28) {
+    [cause]: Error: getaddrinfo ENOTFOUND sudhi-meb1erkw-eastus2.cognitiveservices.azure.com
+        at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+      errno: -3008,
+      code: 'ENOTFOUND',
+      syscall: 'getaddrinfo',
+      hostname: 'sudhi-meb1erkw-eastus2.cognitiveservices.azure.com'
+    }
+  }
+}
+AI analysis error: Error: Failed to analyze document
+    at AzureOpenAIService.analyzeDocument (/home/runner/workspace/server/aiService.ts:180:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:794:28)
+2:22:49 PM [express] POST /api/documents/d2097ca9-79d2-4221-9ceb-67048b3d8ec1/analyze 200 in 2420ms …
+2:22:49 PM [express] GET /api/cases/706c7608-6fb3-4adc-bfed-5db6938522cd/documents 200 in 177ms :: […

@@ -1,0 +1,6 @@
+id,client_name,case_number,case_type,status,description,created_by,created_at,updated_at
+df220bf6-a398-4ddc-8880-0f1c1c526dde,Sarah Johnson,MED-2024-001,Personal Injury - Motor Vehicle Accident,active,"Car accident on Highway 101, client sustained back and neck injuries requiring ongoing medical treatment",851021a8-2db5-4960-abf3-dbe81c6f41c4,2025-08-06 10:56:37.947352,2025-08-06 10:56:37.947352
+b68aa8f8-c63e-4d2e-b05d-0e728be2a1cc,Michael Chen,MED-2024-002,Medical Malpractice,active,"Surgical complications during routine gallbladder removal, leading to extended hospitalization",851021a8-2db5-4960-abf3-dbe81c6f41c4,2025-08-06 10:56:38.004804,2025-08-06 10:56:38.004804
+54e23263-a02a-47a7-984c-017e129a1006,sharan,87898,Car Accident,active,adasdasdasd,851021a8-2db5-4960-abf3-dbe81c6f41c4,2025-08-14 11:46:40.691215,2025-08-14 11:46:40.691215
+706c7608-6fb3-4adc-bfed-5db6938522cd,shnarma ,qwdqw,Medical Malpractice - Surgical Error,active,werwerwe,851021a8-2db5-4960-abf3-dbe81c6f41c4,2025-08-14 11:49:37.109319,2025-08-14 11:49:37.109319
+298f694a-4eb3-43cd-9b75-e739edc21430,Lisa Rodriguez,MED-2024-003,Workplace Injury,pending,Slip and fall incident at construction site resulting in shoulder injury and ongoing physical therapy,851021a8-2db5-4960-abf3-dbe81c6f41c4,2025-08-06 10:56:38.051426,2025-08-14 12:31:29.503
